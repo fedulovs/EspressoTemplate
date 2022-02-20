@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/login_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Input form"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:onClick="openLoginForm"/>
+
+    <Button
+        android:id="@+id/recycler_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Recycler View"
+        app:layout_constraintTop_toBottomOf="@+id/login_btn"
+        tools:layout_editor_absoluteX="1dp" />
+
+    <Button
+        android:id="@+id/toast_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Toast"
+        app:layout_constraintTop_toBottomOf="@+id/recycler_btn"
+        tools:layout_editor_absoluteX="1dp"
+        android:onClick="openToastActivity" />
+
+    <Button
+        android:id="@+id/webview_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="WebView"
+        app:layout_constraintTop_toBottomOf="@+id/toast_btn"
+        tools:layout_editor_absoluteX="1dp"
+        android:onClick="openWebViewActivity" />
+
+    <Button
+        android:id="@+id/dialer_intent_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Intent"
+        app:layout_constraintTop_toBottomOf="@+id/webview_btn"
+        tools:layout_editor_absoluteX="1dp" />
+
+    <Button
+        android:id="@+id/idling_resource_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Idling resource"
+        app:layout_constraintTop_toBottomOf="@+id/dialer_intent_btn"
+        tools:layout_editor_absoluteX="1dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
