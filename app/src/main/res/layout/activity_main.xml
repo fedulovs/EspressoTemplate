@@ -48,14 +48,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Intent"
-        app:layout_constraintTop_toBottomOf="@+id/webview_btn"
-        tools:layout_editor_absoluteX="1dp" />
+        app:layout_constraintTop_toBottomOf="@+id/webview_btn" />
 
     <Button
         android:id="@+id/idling_resource_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Idling resource"
-        app:layout_constraintTop_toBottomOf="@+id/dialer_intent_btn"
-        tools:layout_editor_absoluteX="1dp" />
+        app:layout_constraintTop_toBottomOf="@+id/dialer_intent_btn" />
 </androidx.constraintlayout.widget.ConstraintLayout>
