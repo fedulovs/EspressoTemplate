@@ -9,13 +9,20 @@ import com.example.espressotemplate.ui.login.LoginActivity
 
 class MainActivity : AppCompatActivity() {
 
+    private lateinit var openRecyclerViewButton: Button
     private lateinit var openIntentButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        openRecyclerViewButton = findViewById(R.id.recycler_btn)
         openIntentButton = findViewById(R.id.dialer_intent_btn)
+
+
+        openRecyclerViewButton.setOnClickListener {
+            openRecyclerActivity()
+        }
 
         openIntentButton.setOnClickListener {
             openIntentActivity()
@@ -24,6 +31,12 @@ class MainActivity : AppCompatActivity() {
 
     fun openLoginForm(view: View) {
         val intent = Intent(this, LoginActivity::class.java).apply {
+        }
+        startActivity(intent)
+    }
+
+    fun openRecyclerActivity() {
+        val intent = Intent(this, RecyclerActivity::class.java).apply {
         }
         startActivity(intent)
     }
