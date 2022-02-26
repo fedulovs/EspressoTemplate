@@ -9,7 +9,6 @@ import androidx.test.espresso.action.ViewActions.typeText
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.example.espressotemplate.ui.login.LoginActivity
 import androidx.test.espresso.assertion.ViewAssertions.matches
-import androidx.test.espresso.matcher.ViewMatchers
 import androidx.test.espresso.matcher.ViewMatchers.*
 import androidx.test.platform.app.InstrumentationRegistry
 import org.junit.Before
