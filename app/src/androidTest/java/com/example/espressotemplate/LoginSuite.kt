@@ -2,9 +2,9 @@ package com.example.espressotemplate
 
 import android.content.res.Resources
 import androidx.test.core.app.ActivityScenario.launch
-import androidx.test.ext.junit.runners.AndroidJUnit4
-import com.example.espressotemplate.ui.login.LoginActivity
 import androidx.test.platform.app.InstrumentationRegistry
+import androidx.test.runner.AndroidJUnit4
+import com.example.espressotemplate.ui.login.LoginActivity
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
