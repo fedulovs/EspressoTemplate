@@ -48,13 +48,21 @@
         android:id="@+id/dialer_intent_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Intent"
+        android:text="Dialer intent"
         app:layout_constraintTop_toBottomOf="@+id/webview_btn" />
+
+    <Button
+        android:id="@+id/image_picker_intent_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Image picker"
+        app:layout_constraintTop_toBottomOf="@id/dialer_intent_btn"
+         />
 
     <Button
         android:id="@+id/idling_resource_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Idling resource"
-        app:layout_constraintTop_toBottomOf="@+id/dialer_intent_btn" />
+        app:layout_constraintTop_toBottomOf="@+id/image_picker_intent_btn" />
 </androidx.constraintlayout.widget.ConstraintLayout>

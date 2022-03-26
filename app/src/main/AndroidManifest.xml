@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EspressoTemplate">
         <activity
+            android:name=".GalleryPickerActivity"
+            android:exported="false" />
+        <activity
             android:name=".RecyclerActivity"
             android:exported="false" />
         <activity
