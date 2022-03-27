@@ -8,3 +8,4 @@
 3. Toast
 4. WebView
 5. Dialer intent
+6. Image Picker
