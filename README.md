@@ -9,3 +9,10 @@
 4. WebView
 5. Dialer intent
 6. Image Picker
+
+
+
+<img src="app/src/main/res/readme/main_screen.png" width="40%" height="40%"/>
+
+
+
