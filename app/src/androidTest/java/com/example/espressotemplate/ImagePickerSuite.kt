@@ -4,7 +4,6 @@ import android.app.Activity.RESULT_OK
 import android.app.Instrumentation.ActivityResult
 import android.content.ContentResolver
 import android.content.Intent
-import android.content.res.Resources
 import android.net.Uri
 import android.provider.MediaStore
 import androidx.test.espresso.Espresso.onView
@@ -23,12 +22,11 @@ import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 
-
 @RunWith(AndroidJUnit4ClassRunner::class)
 class ImagePickerSuite {
 
     @get: Rule
-    val intentsTestRule = IntentsTestRule(MainActivity::class.java)
+    val intentsTestRule = IntentsTestRule(GalleryPickerActivity::class.java)
 
     @Test
     fun validateGalleryIntent() {
@@ -41,22 +39,21 @@ class ImagePickerSuite {
         val activityResult = createGalleryPickActivityResultStub()
         intending(expectedIntent).respondWith(activityResult)
 
-        // Open image picker page
-        onView(withId(R.id.image_picker_intent_btn)).perform(click())
-
         // Execute and Verify
         onView(withId(R.id.button_open_gallery)).perform(click())
         intended(expectedIntent)
     }
 
     private fun createGalleryPickActivityResultStub(): ActivityResult {
-        val resources: Resources = InstrumentationRegistry.getInstrumentation().context.resources
+
+        val resources = InstrumentationRegistry.getInstrumentation().targetContext.resources
         val imageUri = Uri.parse(
             ContentResolver.SCHEME_ANDROID_RESOURCE +
                     "://" + resources.getResourcePackageName(R.drawable.ic_launcher_background)
                     + '/' + resources.getResourceTypeName(R.drawable.ic_launcher_background)
                     + '/' + resources.getResourceEntryName(R.drawable.ic_launcher_background)
         )
+
         val resultIntent = Intent()
         resultIntent.setData(imageUri)
         return ActivityResult(RESULT_OK, resultIntent)
