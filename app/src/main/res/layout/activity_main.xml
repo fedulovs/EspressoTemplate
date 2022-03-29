@@ -52,12 +52,18 @@
         app:layout_constraintTop_toBottomOf="@+id/webview_btn" />
 
     <Button
+        android:id="@+id/camera_intent_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Camera intent"
+        app:layout_constraintTop_toBottomOf="@+id/dialer_intent_btn" />
+
+    <Button
         android:id="@+id/image_picker_intent_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Image picker"
-        app:layout_constraintTop_toBottomOf="@id/dialer_intent_btn"
-         />
+        android:text="Gallery intent"
+        app:layout_constraintTop_toBottomOf="@id/camera_intent_btn" />
 
     <Button
         android:id="@+id/idling_resource_btn"
