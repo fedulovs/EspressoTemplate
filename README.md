@@ -4,15 +4,16 @@
 
 ## App currently contains screens:
 1. Input form
-2. RecyclerView
-3. Toast
-4. WebView
-5. Dialer intent
-6. Image Picker
+2. Dialog
+3. RecyclerView
+4. Toast
+5. WebView
+6. Dialer intent
+7. Camera intent
+8. Gallery intent
 
-
-
-<img src="app/src/main/res/readme/main_screen.png" width="40%" height="40%"/>
+---
+<img src="img.png" width="40%" height="40%"/>
 
 
 
