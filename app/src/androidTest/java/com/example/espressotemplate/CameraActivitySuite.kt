@@ -9,11 +9,14 @@ import android.provider.MediaStore
 import androidx.test.InstrumentationRegistry
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.action.ViewActions.click
+import androidx.test.espresso.assertion.ViewAssertions.matches
 import androidx.test.espresso.intent.Intents.intending
 import androidx.test.espresso.intent.matcher.IntentMatchers.hasAction
 import androidx.test.espresso.intent.rule.IntentsTestRule
 import androidx.test.espresso.matcher.ViewMatchers.withId
 import androidx.test.internal.runner.junit4.AndroidJUnit4ClassRunner
+import com.example.espressotemplate.matchers.DrawableMatcher.hasDrawable
+import org.hamcrest.CoreMatchers.not
 import org.hamcrest.Matcher
 import org.junit.Rule
 import org.junit.Test
@@ -34,8 +37,10 @@ class CameraActivitySuite {
         intending(expectedIntent).respondWith(activityResult)
 
         // Execute and verify
+        onView(withId(R.id.image_from_camera)).check(matches(not(hasDrawable())))
         onView(withId(R.id.button_open_camera)).perform(click())
         intending(expectedIntent)
+        onView(withId(R.id.image_from_camera)).check(matches(hasDrawable()))
     }
 
     private fun createImageCaptureActivityResultStub(): ActivityResult? {
