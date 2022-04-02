@@ -13,6 +13,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var openIntentButton: Button
     private lateinit var openImagePickerButton: Button
     private lateinit var openCameraIntentButton: Button
+    private lateinit var openDialogButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,6 +23,7 @@ class MainActivity : AppCompatActivity() {
         openIntentButton = findViewById(R.id.dialer_intent_btn)
         openImagePickerButton = findViewById(R.id.image_picker_intent_btn)
         openCameraIntentButton = findViewById(R.id.camera_intent_btn)
+        openDialogButton = findViewById(R.id.dialog_btn)
 
 
         openRecyclerViewButton.setOnClickListener {
@@ -39,10 +41,20 @@ class MainActivity : AppCompatActivity() {
         openCameraIntentButton.setOnClickListener {
             openCameraIntentActivity()
         }
+
+        openDialogButton.setOnClickListener {
+            openDialogIntentActivity()
+        }
     }
 
     fun openLoginForm(view: View) {
         val intent = Intent(this, LoginActivity::class.java).apply {
+        }
+        startActivity(intent)
+    }
+
+    fun openDialogIntentActivity() {
+        val intent = Intent(this, DialogActivity::class.java).apply {
         }
         startActivity(intent)
     }
