@@ -23,9 +23,10 @@ class ToastMessageTest {
         onView(withId(R.id.toast_btn)).perform(click())
 
         // Click on toast button
-//        onView(withId(R.id.make_a_toast_btn)).perform(click())
+        onView(withId(R.id.make_a_toast_btn)).perform(click())
 
         // Assert the toast is displayed
+        // works on api < 30
         onView(withText(toastText))
             .inRoot(ToastMatcher())
             .check(matches(isDisplayed()))
