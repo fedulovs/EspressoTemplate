@@ -10,15 +10,17 @@ import androidx.test.espresso.matcher.ViewMatchers.*
 import androidx.test.internal.runner.junit4.AndroidJUnit4ClassRunner
 import org.junit.Test
 import org.junit.runner.RunWith
+import pages.DialogPage
 
 @RunWith(AndroidJUnit4ClassRunner::class)
 class DialogInteractionSuite {
+
+    private val EXPECTED_NAME = "Juan"
 
     @Test
     fun writeNameInDialogAndClickOk() {
 
         val activityScenario = ActivityScenario.launch(DialogActivity::class.java)
-        val EXPECTED_NAME = "Juan"
 
         // Click on dialog button
         onView(withId(R.id.button_launch_dialog)).perform(click())
@@ -34,6 +36,18 @@ class DialogInteractionSuite {
 
         // Check if expected name is displayed
         onView(withId(R.id.text_name)).check(matches(withText(EXPECTED_NAME)))
+    }
+
+    @Test
+    fun enterNameInDialog() {
+        val activityScenario = ActivityScenario.launch(DialogActivity::class.java)
+
+        DialogPage()
+            .clickDialogButton()
+            .enterName(EXPECTED_NAME)
+            .clickOk()
+            .assertDialogIsClosed()
+            .assertNameIsDisplayed(EXPECTED_NAME)
     }
 
     @Test
