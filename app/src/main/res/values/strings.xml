@@ -1,14 +1,42 @@
 <resources>
     <string name="app_name">EspressoTemplate</string>
+
+    <!--    Main page-->
+    <string name="input_form_button">Input form</string>
+    <string name="dialog_button">Dialog</string>
+    <string name="recycler_view_button">Recycler View</string>
+    <string name="toast_button">Toast</string>
+    <string name="webview_button">WebView</string>
+    <string name="dialer_intent_button">Dialer intent</string>
+    <string name="camera_intent_button">Camera intent</string>
+    <string name="gallery_intent_button">Gallery intent</string>
+    <string name="idling_resource_button">Idling resource</string>
+
+<!--    Dialog page-->
+    <string name="text_ok">OK</string>
+
+<!--    Login page-->
     <string name="title_activity_login">LoginActivity</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
-    <string name="action_sign_in">Sign in or register</string>
-    <string name="action_sign_in_short">Sign in</string>
-    <string name="welcome">"Welcome !"</string>
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
     <string name="text_enter_name">Enter your name</string>
-    <string name="text_ok">ok</string>
+    <string name="welcome">"Welcome !"</string>
+
+    <string name="open_camera">Open camera</string>
+
+    <string name="launch_dialog">Launch dialog</string>
+    <string name="pick_an_image">Pick an image</string>
+    <string name="enter_phone_number">Enter phone number</string>
+    <string name="call">Call</string>
+    <string name="make_a_toast">Make a toast</string>
+    <string name="random_text">Random text</string>
+    <string name="image_from_camera">image from camera</string>
+    <string name="image_from_gallery">image from gallery</string>
+
+
 </resources>

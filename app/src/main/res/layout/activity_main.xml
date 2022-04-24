@@ -12,7 +12,7 @@
         android:id="@+id/login_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Input form"
+        android:text="@string/input_form_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -22,21 +22,21 @@
         android:id="@+id/dialog_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Dialog"
+        android:text="@string/dialog_button"
         app:layout_constraintTop_toBottomOf="@id/login_btn" />
 
     <Button
         android:id="@+id/recycler_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Recycler View"
+        android:text="@string/recycler_view_button"
         app:layout_constraintTop_toBottomOf="@+id/dialog_btn" />
 
     <Button
         android:id="@+id/toast_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Toast"
+        android:text="@string/toast_button"
         app:layout_constraintTop_toBottomOf="@+id/recycler_btn"
         android:onClick="openToastActivity" />
 
@@ -44,7 +44,7 @@
         android:id="@+id/webview_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="WebView"
+        android:text="@string/webview_button"
         app:layout_constraintTop_toBottomOf="@+id/toast_btn"
         tools:layout_editor_absoluteX="1dp"
         android:onClick="openWebViewActivity" />
@@ -53,27 +53,27 @@
         android:id="@+id/dialer_intent_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Dialer intent"
+        android:text="@string/dialer_intent_button"
         app:layout_constraintTop_toBottomOf="@+id/webview_btn" />
 
     <Button
         android:id="@+id/camera_intent_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Camera intent"
+        android:text="@string/camera_intent_button"
         app:layout_constraintTop_toBottomOf="@+id/dialer_intent_btn" />
 
     <Button
         android:id="@+id/image_picker_intent_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Gallery intent"
+        android:text="@string/gallery_intent_button"
         app:layout_constraintTop_toBottomOf="@id/camera_intent_btn" />
 
     <Button
         android:id="@+id/idling_resource_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Idling resource"
+        android:text="@string/idling_resource_button"
         app:layout_constraintTop_toBottomOf="@+id/image_picker_intent_btn" />
 </androidx.constraintlayout.widget.ConstraintLayout>
